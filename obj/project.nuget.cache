@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ccg5XTqXZa7A4dpMRx89LfWYTRzkNFQfoadRDG6eA4bHOtOcSEUC5D9m68EJnPkP3esrB/OQ0CNjD8btsWgGGw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\1psyh\\OneDrive\\Рабочий стол\\Универ\\Adaptive\\LR4\\LR4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
