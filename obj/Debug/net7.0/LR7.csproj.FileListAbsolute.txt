@@ -31,3 +31,4 @@ C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\De
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\Debug\net7.0\LR7.pdb
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\Debug\net7.0\LR7.genruntimeconfig.cache
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\Debug\net7.0\ref\LR7.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\Debug\net7.0\LR7.sourcelink.json
