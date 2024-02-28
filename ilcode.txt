@@ -1,0 +1,552 @@
+﻿
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 4.8.3928.0
+
+
+
+
+// Metadata version: v4.0.30319
+.assembly extern System.Runtime
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 7:0:0:0
+}
+.assembly extern System.Console
+{
+  .publickeytoken = (B0 3F 5F 7F 11 D5 0A 3A )                         // .?_....:
+  .ver 7:0:0:0
+}
+.assembly LR1
+{
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+                                                                                                                   63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
+
+  // --- Следующий настраиваемый атрибут добавлен автоматически, не следует отменять преобразование в комментарий -------
+  //  .custom instance void [System.Runtime]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [System.Runtime]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 07 01 00 00 00 00 ) 
+
+  .custom instance void [System.Runtime]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = ( 01 00 18 2E 4E 45 54 43 6F 72 65 41 70 70 2C 56   // ....NETCoreApp,V
+                                                                                                              65 72 73 69 6F 6E 3D 76 37 2E 30 01 00 54 0E 14   // ersion=v7.0..T..
+                                                                                                              46 72 61 6D 65 77 6F 72 6B 44 69 73 70 6C 61 79   // FrameworkDisplay
+                                                                                                              4E 61 6D 65 08 2E 4E 45 54 20 37 2E 30 )          // Name..NET 7.0
+  .custom instance void [System.Runtime]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ( 01 00 03 4C 52 31 00 00 )                         // ...LR1..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ( 01 00 05 44 65 62 75 67 00 00 )                   // ...Debug..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ( 01 00 07 31 2E 30 2E 30 2E 30 00 00 )             // ...1.0.0.0..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyInformationalVersionAttribute::.ctor(string) = ( 01 00 05 31 2E 30 2E 30 00 00 )                   // ...1.0.0..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyProductAttribute::.ctor(string) = ( 01 00 03 4C 52 31 00 00 )                         // ...LR1..
+  .custom instance void [System.Runtime]System.Reflection.AssemblyTitleAttribute::.ctor(string) = ( 01 00 03 4C 52 31 00 00 )                         // ...LR1..
+  .hash algorithm 0x00008004
+  .ver 1:0:0:0
+}
+.module LR1.dll
+// MVID: {8EEA39C9-820D-45DB-826C-685E05DCA3C9}
+.custom instance void System.Runtime.CompilerServices.RefSafetyRulesAttribute::.ctor(int32) = ( 01 00 0B 00 00 00 00 00 ) 
+.imagebase 0x00400000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00000001    //  ILONLY
+// Image base: 0x06D50000
+
+
+// =============== CLASS MEMBERS DECLARATION ===================
+
+.class private auto ansi sealed beforefieldinit Microsoft.CodeAnalysis.EmbeddedAttribute
+       extends [System.Runtime]System.Attribute
+{
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Размер кода:       8 (0x8)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [System.Runtime]System.Attribute::.ctor()
+    IL_0006:  nop
+    IL_0007:  ret
+  } // end of method EmbeddedAttribute::.ctor
+
+} // end of class Microsoft.CodeAnalysis.EmbeddedAttribute
+
+.class private auto ansi sealed beforefieldinit System.Runtime.CompilerServices.NullableAttribute
+       extends [System.Runtime]System.Attribute
+{
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [System.Runtime]System.AttributeUsageAttribute::.ctor(valuetype [System.Runtime]System.AttributeTargets) = ( 01 00 84 6B 00 00 02 00 54 02 0D 41 6C 6C 6F 77   // ...k....T..Allow
+                                                                                                                                     4D 75 6C 74 69 70 6C 65 00 54 02 09 49 6E 68 65   // Multiple.T..Inhe
+                                                                                                                                     72 69 74 65 64 00 )                               // rited.
+  .field public initonly uint8[] NullableFlags
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor(uint8 A_1) cil managed
+  {
+    // Размер кода:       24 (0x18)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [System.Runtime]System.Attribute::.ctor()
+    IL_0006:  nop
+    IL_0007:  ldarg.0
+    IL_0008:  ldc.i4.1
+    IL_0009:  newarr     [System.Runtime]System.Byte
+    IL_000e:  dup
+    IL_000f:  ldc.i4.0
+    IL_0010:  ldarg.1
+    IL_0011:  stelem.i1
+    IL_0012:  stfld      uint8[] System.Runtime.CompilerServices.NullableAttribute::NullableFlags
+    IL_0017:  ret
+  } // end of method NullableAttribute::.ctor
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor(uint8[] A_1) cil managed
+  {
+    // Размер кода:       15 (0xf)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [System.Runtime]System.Attribute::.ctor()
+    IL_0006:  nop
+    IL_0007:  ldarg.0
+    IL_0008:  ldarg.1
+    IL_0009:  stfld      uint8[] System.Runtime.CompilerServices.NullableAttribute::NullableFlags
+    IL_000e:  ret
+  } // end of method NullableAttribute::.ctor
+
+} // end of class System.Runtime.CompilerServices.NullableAttribute
+
+.class private auto ansi sealed beforefieldinit System.Runtime.CompilerServices.RefSafetyRulesAttribute
+       extends [System.Runtime]System.Attribute
+{
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void Microsoft.CodeAnalysis.EmbeddedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [System.Runtime]System.AttributeUsageAttribute::.ctor(valuetype [System.Runtime]System.AttributeTargets) = ( 01 00 02 00 00 00 02 00 54 02 0D 41 6C 6C 6F 77   // ........T..Allow
+                                                                                                                                     4D 75 6C 74 69 70 6C 65 00 54 02 09 49 6E 68 65   // Multiple.T..Inhe
+                                                                                                                                     72 69 74 65 64 00 )                               // rited.
+  .field public initonly int32 Version
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor(int32 A_1) cil managed
+  {
+    // Размер кода:       15 (0xf)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [System.Runtime]System.Attribute::.ctor()
+    IL_0006:  nop
+    IL_0007:  ldarg.0
+    IL_0008:  ldarg.1
+    IL_0009:  stfld      int32 System.Runtime.CompilerServices.RefSafetyRulesAttribute::Version
+    IL_000e:  ret
+  } // end of method RefSafetyRulesAttribute::.ctor
+
+} // end of class System.Runtime.CompilerServices.RefSafetyRulesAttribute
+
+.class private auto ansi beforefieldinit Program
+       extends [System.Runtime]System.Object
+{
+  .method private hidebysig static void  Main() cil managed
+  {
+    .entrypoint
+    // Размер кода:       176 (0xb0)
+    .maxstack  2
+    .locals init (string V_0,
+             string V_1,
+             string V_2,
+             bool V_3)
+    IL_0000:  nop
+    IL_0001:  call       void Menu::LoadLoremIpsumText()
+    IL_0006:  nop
+    IL_0007:  br         IL_00a9
+
+    IL_000c:  nop
+    IL_000d:  call       class [System.Runtime]System.Text.Encoding [System.Runtime]System.Text.Encoding::get_UTF8()
+    IL_0012:  call       void [System.Console]System.Console::set_OutputEncoding(class [System.Runtime]System.Text.Encoding)
+    IL_0017:  nop
+    IL_0018:  ldstr      bytearray (1C 04 35 04 3D 04 4E 04 3A 00 )                   // ..5.=.N.:.
+    IL_001d:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_0022:  nop
+    IL_0023:  ldstr      bytearray (31 00 2E 00 20 00 12 04 38 04 32 04 35 04 41 04   // 1... ...8.2.5.A.
+                                    42 04 38 04 20 00 32 04 3A 04 30 04 37 04 30 04   // B.8. .2.:.0.7.0.
+                                    3D 04 43 04 20 00 3A 04 56 04 3B 04 4C 04 3A 04   // =.C. .:.V.;.L.:.
+                                    56 04 41 04 42 04 4C 04 20 00 41 04 3B 04 56 04   // V.A.B.L. .A.;.V.
+                                    32 04 20 00 43 04 20 00 42 04 35 04 3A 04 41 04   // 2. .C. .B.5.:.A.
+                                    42 04 56 04 20 00 22 00 4C 00 6F 00 72 00 65 00   // B.V. .".L.o.r.e.
+                                    6D 00 20 00 69 00 70 00 73 00 75 00 6D 00 22 00 ) // m. .i.p.s.u.m.".
+    IL_0028:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_002d:  nop
+    IL_002e:  ldstr      bytearray (32 00 2E 00 20 00 12 04 38 04 3A 04 3E 04 3D 04   // 2... ...8.:.>.=.
+                                    30 04 42 04 38 04 20 00 3C 04 30 04 42 04 35 04   // 0.B.8. .<.0.B.5.
+                                    3C 04 30 04 42 04 38 04 47 04 3D 04 43 04 20 00   // <.0.B.8.G.=.C. .
+                                    3E 04 3F 04 35 04 40 04 30 04 46 04 56 04 4E 04 ) // >.?.5.@.0.F.V.N.
+    IL_0033:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_0038:  nop
+    IL_0039:  ldstr      bytearray (30 00 2E 00 20 00 12 04 38 04 39 04 42 04 38 04 ) // 0... ...8.9.B.8.
+    IL_003e:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_0043:  nop
+    IL_0044:  ldstr      bytearray (1E 04 31 04 35 04 40 04 56 04 42 04 4C 04 20 00   // ..1.5.@.V.B.L. .
+                                    3F 04 43 04 3D 04 3A 04 42 04 20 00 3C 04 35 04   // ?.C.=.:.B. .<.5.
+                                    3D 04 4E 04 20 00 28 00 32 04 32 04 35 04 34 04   // =.N. .(.2.2.5.4.
+                                    56 04 42 04 4C 04 20 00 3D 04 3E 04 3C 04 35 04   // V.B.L. .=.>.<.5.
+                                    40 04 29 00 3A 00 20 00 )                         // @.).:. .
+    IL_0049:  call       void [System.Console]System.Console::Write(string)
+    IL_004e:  nop
+    IL_004f:  call       string [System.Console]System.Console::ReadLine()
+    IL_0054:  stloc.0
+    IL_0055:  ldloc.0
+    IL_0056:  stloc.2
+    IL_0057:  ldloc.2
+    IL_0058:  stloc.1
+    IL_0059:  ldloc.1
+    IL_005a:  ldstr      "1"
+    IL_005f:  call       bool [System.Runtime]System.String::op_Equality(string,
+                                                                         string)
+    IL_0064:  brtrue.s   IL_0082
+
+    IL_0066:  ldloc.1
+    IL_0067:  ldstr      "2"
+    IL_006c:  call       bool [System.Runtime]System.String::op_Equality(string,
+                                                                         string)
+    IL_0071:  brtrue.s   IL_008a
+
+    IL_0073:  ldloc.1
+    IL_0074:  ldstr      "0"
+    IL_0079:  call       bool [System.Runtime]System.String::op_Equality(string,
+                                                                         string)
+    IL_007e:  brtrue.s   IL_0092
+
+    IL_0080:  br.s       IL_009b
+
+    IL_0082:  call       void Menu::DisplaySpecifiedWordCount()
+    IL_0087:  nop
+    IL_0088:  br.s       IL_00a8
+
+    IL_008a:  call       void Menu::PerformMathOperation()
+    IL_008f:  nop
+    IL_0090:  br.s       IL_00a8
+
+    IL_0092:  ldc.i4.0
+    IL_0093:  call       void [System.Runtime]System.Environment::Exit(int32)
+    IL_0098:  nop
+    IL_0099:  br.s       IL_00a8
+
+    IL_009b:  ldstr      bytearray (1D 04 35 04 32 04 56 04 40 04 3D 04 38 04 39 04   // ..5.2.V.@.=.8.9.
+                                    20 00 32 04 38 04 31 04 56 04 40 04 2E 00 20 00   //  .2.8.1.V.@... .
+                                    21 04 3F 04 40 04 3E 04 31 04 43 04 39 04 42 04   // !.?.@.>.1.C.9.B.
+                                    35 04 20 00 49 04 35 04 20 00 40 04 30 04 37 04   // 5. .I.5. .@.0.7.
+                                    2E 00 )                                           // ..
+    IL_00a0:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_00a5:  nop
+    IL_00a6:  br.s       IL_00a8
+
+    IL_00a8:  nop
+    IL_00a9:  ldc.i4.1
+    IL_00aa:  stloc.3
+    IL_00ab:  br         IL_000c
+  } // end of method Program::Main
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Размер кода:       8 (0x8)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [System.Runtime]System.Object::.ctor()
+    IL_0006:  nop
+    IL_0007:  ret
+  } // end of method Program::.ctor
+
+} // end of class Program
+
+.class private auto ansi beforefieldinit Menu
+       extends [System.Runtime]System.Object
+{
+  .field private static string loremIpsumText
+  .custom instance void System.Runtime.CompilerServices.NullableAttribute::.ctor(uint8) = ( 01 00 01 00 00 ) 
+  .method public hidebysig static void  LoadLoremIpsumText() cil managed
+  {
+    // Размер кода:       57 (0x39)
+    .maxstack  3
+    .locals init (string V_0)
+    IL_0000:  nop
+    IL_0001:  ldstr      bytearray (43 00 3A 00 5C 00 55 00 73 00 65 00 72 00 73 00   // C.:.\.U.s.e.r.s.
+                                    5C 00 31 00 70 00 73 00 79 00 68 00 5C 00 4F 00   // \.1.p.s.y.h.\.O.
+                                    6E 00 65 00 44 00 72 00 69 00 76 00 65 00 5C 00   // n.e.D.r.i.v.e.\.
+                                    20 04 30 04 31 04 3E 04 47 04 38 04 39 04 20 00   //  .0.1.>.G.8.9. .
+                                    41 04 42 04 3E 04 3B 04 5C 00 23 04 3D 04 38 04   // A.B.>.;.\.#.=.8.
+                                    32 04 35 04 40 04 5C 00 41 00 64 00 61 00 70 00   // 2.5.@.\.A.d.a.p.
+                                    74 00 69 00 76 00 65 00 5C 00 4C 00 52 00 31 00   // t.i.v.e.\.L.R.1.
+                                    5C 00 4C 00 6F 00 72 00 65 00 6D 00 49 00 70 00   // \.L.o.r.e.m.I.p.
+                                    73 00 75 00 6D 00 2E 00 74 00 78 00 74 00 )       // s.u.m...t.x.t.
+    IL_0006:  stloc.0
+    .try
+    {
+      IL_0007:  nop
+      IL_0008:  ldloc.0
+      IL_0009:  call       string [System.Runtime]System.IO.File::ReadAllText(string)
+      IL_000e:  stsfld     string Menu::loremIpsumText
+      IL_0013:  nop
+      IL_0014:  leave.s    IL_0038
+
+    }  // end .try
+    catch [System.Runtime]System.IO.FileNotFoundException 
+    {
+      IL_0016:  pop
+      IL_0017:  nop
+      IL_0018:  ldstr      bytearray (24 04 30 04 39 04 3B 04 20 00 )                   // $.0.9.;. .
+      IL_001d:  ldloc.0
+      IL_001e:  ldstr      bytearray (20 00 3D 04 35 04 20 00 37 04 3D 04 30 04 39 04   //  .=.5. .7.=.0.9.
+                                      34 04 35 04 3D 04 3E 04 2E 00 )                   // 4.5.=.>...
+      IL_0023:  call       string [System.Runtime]System.String::Concat(string,
+                                                                        string,
+                                                                        string)
+      IL_0028:  call       void [System.Console]System.Console::WriteLine(string)
+      IL_002d:  nop
+      IL_002e:  ldc.i4.1
+      IL_002f:  call       void [System.Runtime]System.Environment::Exit(int32)
+      IL_0034:  nop
+      IL_0035:  nop
+      IL_0036:  leave.s    IL_0038
+
+    }  // end handler
+    IL_0038:  ret
+  } // end of method Menu::LoadLoremIpsumText
+
+  .method public hidebysig static void  DisplaySpecifiedWordCount() cil managed
+  {
+    // Размер кода:       177 (0xb1)
+    .maxstack  4
+    .locals init (int32 V_0,
+             string[] V_1,
+             bool V_2,
+             int32 V_3,
+             bool V_4,
+             valuetype [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler V_5)
+    IL_0000:  nop
+    IL_0001:  ldstr      bytearray (12 04 32 04 35 04 34 04 56 04 42 04 4C 04 20 00   // ..2.5.4.V.B.L. .
+                                    3A 04 56 04 3B 04 4C 04 3A 04 56 04 41 04 42 04   // :.V.;.L.:.V.A.B.
+                                    4C 04 20 00 41 04 3B 04 56 04 32 04 20 00 34 04   // L. .A.;.V.2. .4.
+                                    3B 04 4F 04 20 00 32 04 38 04 32 04 35 04 34 04   // ;.O. .2.8.2.5.4.
+                                    35 04 3D 04 3D 04 4F 04 3A 00 20 00 )             // 5.=.=.O.:. .
+    IL_0006:  call       void [System.Console]System.Console::Write(string)
+    IL_000b:  nop
+    IL_000c:  call       string [System.Console]System.Console::ReadLine()
+    IL_0011:  call       int32 [System.Runtime]System.Convert::ToInt32(string)
+    IL_0016:  stloc.0
+    IL_0017:  ldsfld     string Menu::loremIpsumText
+    IL_001c:  ldc.i4.4
+    IL_001d:  newarr     [System.Runtime]System.Char
+    IL_0022:  dup
+    IL_0023:  ldtoken    field int64 '<PrivateImplementationDetails>'::DACC0E6568D9B10337A1A693F10D42C3175E80C378154406C6FBFA989F919F51
+    IL_0028:  call       void [System.Runtime]System.Runtime.CompilerServices.RuntimeHelpers::InitializeArray(class [System.Runtime]System.Array,
+                                                                                                              valuetype [System.Runtime]System.RuntimeFieldHandle)
+    IL_002d:  ldc.i4.1
+    IL_002e:  callvirt   instance string[] [System.Runtime]System.String::Split(char[],
+                                                                                valuetype [System.Runtime]System.StringSplitOptions)
+    IL_0033:  stloc.1
+    IL_0034:  ldloc.0
+    IL_0035:  ldloc.1
+    IL_0036:  ldlen
+    IL_0037:  conv.i4
+    IL_0038:  cgt
+    IL_003a:  ldc.i4.0
+    IL_003b:  ceq
+    IL_003d:  stloc.2
+    IL_003e:  ldloc.2
+    IL_003f:  brfalse.s  IL_0072
+
+    IL_0041:  nop
+    IL_0042:  ldc.i4.0
+    IL_0043:  stloc.3
+    IL_0044:  br.s       IL_005f
+
+    IL_0046:  nop
+    IL_0047:  ldloc.1
+    IL_0048:  ldloc.3
+    IL_0049:  ldelem.ref
+    IL_004a:  ldstr      " "
+    IL_004f:  call       string [System.Runtime]System.String::Concat(string,
+                                                                      string)
+    IL_0054:  call       void [System.Console]System.Console::Write(string)
+    IL_0059:  nop
+    IL_005a:  nop
+    IL_005b:  ldloc.3
+    IL_005c:  ldc.i4.1
+    IL_005d:  add
+    IL_005e:  stloc.3
+    IL_005f:  ldloc.3
+    IL_0060:  ldloc.0
+    IL_0061:  clt
+    IL_0063:  stloc.s    V_4
+    IL_0065:  ldloc.s    V_4
+    IL_0067:  brtrue.s   IL_0046
+
+    IL_0069:  call       void [System.Console]System.Console::WriteLine()
+    IL_006e:  nop
+    IL_006f:  nop
+    IL_0070:  br.s       IL_00b0
+
+    IL_0072:  nop
+    IL_0073:  ldloca.s   V_5
+    IL_0075:  ldc.i4.s   52
+    IL_0077:  ldc.i4.1
+    IL_0078:  call       instance void [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::.ctor(int32,
+                                                                                                                               int32)
+    IL_007d:  ldloca.s   V_5
+    IL_007f:  ldstr      bytearray (22 04 35 04 3A 04 41 04 42 04 20 00 3C 04 56 04   // ".5.:.A.B. .<.V.
+                                    41 04 42 04 38 04 42 04 4C 04 20 00 3C 04 35 04   // A.B.8.B.L. .<.5.
+                                    3D 04 48 04 35 04 20 00 41 04 3B 04 56 04 32 04   // =.H.5. .A.;.V.2.
+                                    2C 00 20 00 3D 04 56 04 36 04 20 00 32 04 3A 04   // ,. .=.V.6. .2.:.
+                                    30 04 37 04 30 04 3D 04 3E 04 4E 04 20 00 3A 04   // 0.7.0.=.>.N. .:.
+                                    56 04 3B 04 4C 04 3A 04 56 04 41 04 42 04 4C 04   // V.;.L.:.V.A.B.L.
+                                    20 00 28 00 )                                     //  .(.
+    IL_0084:  call       instance void [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(string)
+    IL_0089:  nop
+    IL_008a:  ldloca.s   V_5
+    IL_008c:  ldloc.1
+    IL_008d:  ldlen
+    IL_008e:  conv.i4
+    IL_008f:  call       instance void [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<int32>(!!0)
+    IL_0094:  nop
+    IL_0095:  ldloca.s   V_5
+    IL_0097:  ldstr      ")."
+    IL_009c:  call       instance void [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(string)
+    IL_00a1:  nop
+    IL_00a2:  ldloca.s   V_5
+    IL_00a4:  call       instance string [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::ToStringAndClear()
+    IL_00a9:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_00ae:  nop
+    IL_00af:  nop
+    IL_00b0:  ret
+  } // end of method Menu::DisplaySpecifiedWordCount
+
+  .method public hidebysig static void  PerformMathOperation() cil managed
+  {
+    // Размер кода:       203 (0xcb)
+    .maxstack  3
+    .locals init (float64 V_0,
+             float64 V_1,
+             char V_2,
+             float64 V_3,
+             char V_4,
+             char V_5,
+             valuetype [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler V_6)
+    IL_0000:  nop
+    IL_0001:  ldstr      bytearray (12 04 32 04 35 04 34 04 56 04 42 04 4C 04 20 00   // ..2.5.4.V.B.L. .
+                                    3F 04 35 04 40 04 48 04 35 04 20 00 47 04 38 04   // ?.5.@.H.5. .G.8.
+                                    41 04 3B 04 3E 04 3A 00 20 00 )                   // A.;.>.:. .
+    IL_0006:  call       void [System.Console]System.Console::Write(string)
+    IL_000b:  nop
+    IL_000c:  call       string [System.Console]System.Console::ReadLine()
+    IL_0011:  call       float64 [System.Runtime]System.Convert::ToDouble(string)
+    IL_0016:  stloc.0
+    IL_0017:  ldstr      bytearray (12 04 32 04 35 04 34 04 56 04 42 04 4C 04 20 00   // ..2.5.4.V.B.L. .
+                                    34 04 40 04 43 04 33 04 35 04 20 00 47 04 38 04   // 4.@.C.3.5. .G.8.
+                                    41 04 3B 04 3E 04 3A 00 20 00 )                   // A.;.>.:. .
+    IL_001c:  call       void [System.Console]System.Console::Write(string)
+    IL_0021:  nop
+    IL_0022:  call       string [System.Console]System.Console::ReadLine()
+    IL_0027:  call       float64 [System.Runtime]System.Convert::ToDouble(string)
+    IL_002c:  stloc.1
+    IL_002d:  ldstr      bytearray (12 04 32 04 35 04 34 04 56 04 42 04 4C 04 20 00   // ..2.5.4.V.B.L. .
+                                    3E 04 3F 04 35 04 40 04 30 04 46 04 56 04 4E 04   // >.?.5.@.0.F.V.N.
+                                    20 00 28 00 2B 00 2C 00 20 00 2D 00 2C 00 20 00   //  .(.+.,. .-.,. .
+                                    2A 00 2C 00 20 00 2F 00 29 00 3A 00 20 00 )       // *.,. ./.).:. .
+    IL_0032:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_0037:  nop
+    IL_0038:  call       string [System.Console]System.Console::ReadLine()
+    IL_003d:  call       char [System.Runtime]System.Convert::ToChar(string)
+    IL_0042:  stloc.2
+    IL_0043:  ldc.r8     0.0
+    IL_004c:  stloc.3
+    IL_004d:  ldloc.2
+    IL_004e:  stloc.s    V_5
+    IL_0050:  ldloc.s    V_5
+    IL_0052:  stloc.s    V_4
+    IL_0054:  ldloc.s    V_4
+    IL_0056:  ldc.i4.s   42
+    IL_0058:  sub
+    IL_0059:  switch     ( 
+                          IL_0084,
+                          IL_0078,
+                          IL_0090,
+                          IL_007e,
+                          IL_0090,
+                          IL_008a)
+    IL_0076:  br.s       IL_0090
+
+    IL_0078:  ldloc.0
+    IL_0079:  ldloc.1
+    IL_007a:  add
+    IL_007b:  stloc.3
+    IL_007c:  br.s       IL_009d
+
+    IL_007e:  ldloc.0
+    IL_007f:  ldloc.1
+    IL_0080:  sub
+    IL_0081:  stloc.3
+    IL_0082:  br.s       IL_009d
+
+    IL_0084:  ldloc.0
+    IL_0085:  ldloc.1
+    IL_0086:  mul
+    IL_0087:  stloc.3
+    IL_0088:  br.s       IL_009d
+
+    IL_008a:  ldloc.0
+    IL_008b:  ldloc.1
+    IL_008c:  div
+    IL_008d:  stloc.3
+    IL_008e:  br.s       IL_009d
+
+    IL_0090:  ldstr      bytearray (1D 04 35 04 32 04 56 04 40 04 3D 04 30 04 20 00   // ..5.2.V.@.=.0. .
+                                    3E 04 3F 04 35 04 40 04 30 04 46 04 56 04 4F 04   // >.?.5.@.0.F.V.O.
+                                    2E 00 )                                           // ..
+    IL_0095:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_009a:  nop
+    IL_009b:  br.s       IL_00ca
+
+    IL_009d:  ldloca.s   V_6
+    IL_009f:  ldc.i4.s   20
+    IL_00a1:  ldc.i4.1
+    IL_00a2:  call       instance void [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::.ctor(int32,
+                                                                                                                               int32)
+    IL_00a7:  ldloca.s   V_6
+    IL_00a9:  ldstr      bytearray (20 04 35 04 37 04 43 04 3B 04 4C 04 42 04 30 04   //  .5.7.C.;.L.B.0.
+                                    42 04 20 00 3E 04 3F 04 35 04 40 04 30 04 46 04   // B. .>.?.5.@.0.F.
+                                    56 04 57 04 3A 00 20 00 )                         // V.W.:. .
+    IL_00ae:  call       instance void [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendLiteral(string)
+    IL_00b3:  nop
+    IL_00b4:  ldloca.s   V_6
+    IL_00b6:  ldloc.3
+    IL_00b7:  call       instance void [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::AppendFormatted<float64>(!!0)
+    IL_00bc:  nop
+    IL_00bd:  ldloca.s   V_6
+    IL_00bf:  call       instance string [System.Runtime]System.Runtime.CompilerServices.DefaultInterpolatedStringHandler::ToStringAndClear()
+    IL_00c4:  call       void [System.Console]System.Console::WriteLine(string)
+    IL_00c9:  nop
+    IL_00ca:  ret
+  } // end of method Menu::PerformMathOperation
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Размер кода:       8 (0x8)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [System.Runtime]System.Object::.ctor()
+    IL_0006:  nop
+    IL_0007:  ret
+  } // end of method Menu::.ctor
+
+} // end of class Menu
+
+.class private auto ansi sealed '<PrivateImplementationDetails>'
+       extends [System.Runtime]System.Object
+{
+  .custom instance void [System.Runtime]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .field static assembly initonly int64 DACC0E6568D9B10337A1A693F10D42C3175E80C378154406C6FBFA989F919F51 at I_00003300
+} // end of class '<PrivateImplementationDetails>'
+
+
+// =============================================================
+
+.data cil I_00003300 = bytearray (
+                 20 00 09 00 0A 00 0D 00)                         //  .......
+// *********** ДИЗАССЕМБЛИРОВАНИЕ ЗАВЕРШЕНО ***********************
+// ВНИМАНИЕ: создан файл ресурсов Win32 C:\Users\1psyh\OneDrive\Рабочий стол\ilcode.res

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "vxycxA7R2FWVIsMow8/eMoBRAKvqF1Pu1BXP6w4xCF8Oa5Uw4LroE2WDBwMYJ17Ja9oqawAyhZ9FHbYPdRaD4Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\1psyh\\OneDrive\\Рабочий стол\\Универ\\Adaptive\\LR1\\LR1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\1psyh\\.nuget\\packages\\mono.cecil\\0.11.5\\mono.cecil.0.11.5.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\1psyh\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
