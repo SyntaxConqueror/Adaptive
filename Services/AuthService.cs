@@ -34,11 +34,14 @@ namespace LR7.Services
             var existingUser = await _userService.ValidateUser(email);
             if (existingUser == null) return "Invalid credentials";
 
+            existingUser.LastLogin = DateTime.UtcNow;
             if(_encryptPasswordService.ValidatePassword(password, existingUser.Password))
             {
                 var token = GenerateJwtToken(existingUser);
                 return token;
             }
+
+            existingUser.FailedLoginAttempts += 1;
 
             return "Password is not valid";
         }
