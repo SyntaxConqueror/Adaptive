@@ -32,3 +32,11 @@ C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\De
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\Debug\net7.0\LR7.genruntimeconfig.cache
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\Debug\net7.0\ref\LR7.dll
 C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\obj\Debug\net7.0\LR7.sourcelink.json
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\1psyh\OneDrive\Рабочий стол\Универ\Adaptive\LR7\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

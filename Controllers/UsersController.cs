@@ -1,4 +1,5 @@
 ﻿using LR7.Models;
+using LR7.Services;
 using LR7.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,10 +10,13 @@ namespace LR7.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IUserService _userService;
+        protected AuthService _authService;
+        protected EncryptPasswordService _encryptPasswordService;
 
         public UsersController(IUserService userService)
         {
             _userService = userService;
+            _authService = new AuthService();
         }
 
         [HttpGet("users/")]
@@ -54,6 +58,20 @@ namespace LR7.Controllers
             if (!result)
                 return NotFound();
             return NoContent();
+        }
+
+        [HttpPost("user/register")]
+        public async Task<IActionResult> Register([FromBody] UserModel user)
+        {
+            var createdUser = await _authService.Register(user);
+            return CreatedAtAction(nameof(Get), new { id = createdUser.Id }, createdUser);
+        }
+
+        [HttpPost("user/login")]
+        public async Task<string> Login([FromBody] LoginRequestModel login)
+        {
+            var jwtToken = await _authService.Login(login.Email, login.Password);
+            return "Authorization: Bearer " + jwtToken;
         }
     }
 }

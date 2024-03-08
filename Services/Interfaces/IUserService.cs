@@ -8,6 +8,7 @@ namespace LR7.Services.Interfaces
         Task<UserModel> GetUserByIdAsync(int id);
         Task<UserModel> CreateUserAsync(UserModel user);
         Task<UserModel> UpdateUserAsync(int id, UserModel user);
+        Task<UserModel> ValidateUser(string email);
         Task<bool> DeleteUserAsync(int id);
     }
 }

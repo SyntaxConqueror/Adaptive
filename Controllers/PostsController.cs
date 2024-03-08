@@ -1,9 +1,11 @@
 ﻿using LR7.Models;
 using LR7.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LR7.Controllers
 {
+    [Authorize]
     public class PostsController : ControllerBase
     {
         private readonly IPostService _postService;
