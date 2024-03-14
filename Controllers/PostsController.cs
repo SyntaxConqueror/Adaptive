@@ -15,6 +15,7 @@ namespace LR7.Controllers
             _postService = postService;
         }
 
+        [Authorize]
         [HttpGet("posts/")]
         public async Task<IActionResult> Get()
         {

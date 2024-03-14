@@ -1,6 +1,8 @@
 using LR7.Services;
 using LR7.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
@@ -11,8 +13,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddApiVersioning(options =>
+{
+    options.ReportApiVersions = true;
+    options.DefaultApiVersion = new ApiVersion(3, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ApiVersionReader = new UrlSegmentApiVersionReader();
+
+});
+
 builder.Services.AddScoped<IUserService, UserService>(); //  ќдин екземпл€р серв≥су буде створений дл€ кожного HTTP-запиту
                                                          //  ÷е означаЇ, що вс≥ запити, €к≥ оброблюютьс€ в рамках одного HTTP-запиту, будуть використовувати той самий екземпл€р серв≥су
+
+builder.Services.AddScoped<IVersioningService, VersioningService>();
 
 builder.Services.AddSingleton<IPostService, PostService>(); // ќдин екземпл€р серв≥су буде створений на всю тривал≥сть роботи додатку
                                                             // ÷е означаЇ, що кожний HTTP-запит буде використовувати той самий екземпл€р серв≥су
