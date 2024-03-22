@@ -6,12 +6,33 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using LR7.Database;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHealthChecks().AddCheck<TimeHealthCheck>("time_check", null, new[] { "time" })
+        .AddCheck<FileSystemHealthCheck>("file_system_check", null, new[] { "files" })
+        .AddDbContextCheck<ApplicationDbContext>("database_health_check");
+builder.Services.AddHealthChecksUI().AddInMemoryStorage();
+
+builder.Services.AddSingleton<string>("C:\\Users\\artsh\\OneDrive\\Рабочий стол\\Work\\artishok\\app\\Console\\Kerne.php");
+builder.Services.AddSingleton<FileSystemHealthCheck>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(
+    options => options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+);
 
 builder.Services.AddApiVersioning(options =>
 {
@@ -80,13 +101,82 @@ builder.Services.AddSwaggerGen(options =>
 var app = builder.Build();
 
 
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseAuthentication();
     app.UseAuthorization();
     app.UseSwaggerUI();
+    app.UseRouting();
+#pragma warning disable ASP0014
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapHealthChecks("/health/time", new HealthCheckOptions
+        {
+            Predicate = (check) => check.Tags.Contains("time"),
+            ResponseWriter = async (context, report) =>
+            {
+                context.Response.ContentType = "application/json";
+
+                var options = new JsonSerializerOptions
+                {
+                    Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                    WriteIndented = true
+                };
+
+                var result = new
+                {
+                    status = report.Status.ToString(),
+                    checks = report.Entries.Select(x => new
+                    {
+                        name = x.Key,
+                        status = x.Value.Status.ToString(),
+                        description = x.Value.Description
+                    }),
+                    totalDuration = report.TotalDuration
+                };
+
+                await context.Response.WriteAsync(JsonSerializer.Serialize(result, options));
+            }
+        });
+
+        endpoints.MapHealthChecks("/health/files", new HealthCheckOptions
+        {
+            Predicate = (check) => check.Tags.Contains("files"),
+            ResponseWriter = async (context, report) =>
+            {
+                context.Response.ContentType = "application/json";
+
+                var options = new JsonSerializerOptions
+                {
+                    Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+                    WriteIndented = true
+                };
+
+                var result = new
+                {
+                    status = report.Status.ToString(),
+                    checks = report.Entries.Select(x => new
+                    {
+                        name = x.Key,
+                        status = x.Value.Status.ToString(),
+                        description = x.Value.Description
+                    }),
+                    totalDuration = report.TotalDuration
+                };
+
+                await context.Response.WriteAsync(JsonSerializer.Serialize(result, options));
+            }
+        });
+
+        endpoints.MapHealthChecks("/health/db");
+
+        endpoints.MapHealthChecksUI(options =>
+        {
+            options.UIPath = "/hc-ui";
+        });
+    });
+#pragma warning restore ASP0014
 }
 
 app.UseHttpsRedirection();
